@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Media;
+using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -18,32 +19,30 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-
         }
 
-        private void updateWithNewKey(int i)
+        private void updateWithNewKey(ButtonType buttonType)
         {
             Random rnd = new Random();
             String key = keys[rnd.Next(keys.Length)];
-            using (SoundPlayer player = new SoundPlayer("C:\\Users\\Peen\\Documents\\Visual Studio 2010\\Projects\\Music Project\\" + key.Substring(0, 1) + ".wav"))
+			string appPath = Path.GetDirectoryName(Application.ExecutablePath);
+            using (SoundPlayer player = new SoundPlayer(appPath + "\\Sound\\" + key.Substring(0, 1) + ".wav"))
             {
                 player.PlaySync();
             }
             if (key.Contains("b"))
             {
-                using (SoundPlayer player = new SoundPlayer("C:\\Users\\Peen\\Documents\\Visual Studio 2010\\Projects\\Music Project\\flat.wav"))
+                using (SoundPlayer player = new SoundPlayer(appPath + "\\Sound\\" + "flat.wav"))
                 {
-                    player.Play();
+                    player.PlaySync();
                 }
             }
-            switch (i)
+            switch (buttonType)
             {
-                // Major
-                case 1:
+                case ButtonType.Major:
                     lKeyDisplay.Text = lKeyDisplay.Text + key + " ";
                     break;
-                // Minor
-                case 2:
+                case ButtonType.Both:
                     if (rnd.Next(2) == 1)
                     {
                         lKeyDisplay.Text = lKeyDisplay.Text + key + " ";
@@ -51,16 +50,15 @@ namespace WindowsFormsApplication1
                     else
                     {
                         lKeyDisplay.Text = lKeyDisplay.Text + key + "m ";
-                        using (SoundPlayer player = new SoundPlayer("C:\\Users\\Peen\\Documents\\Visual Studio 2010\\Projects\\Music Project\\minor.wav"))
+                        using (SoundPlayer player = new SoundPlayer(appPath + "\\Sound\\" + "minor.wav"))
                         {
                             player.PlaySync();
                         }
                     }
                     break;
-                // Both
-                case 3:
+                case ButtonType.Minor:
                     lKeyDisplay.Text = lKeyDisplay.Text + key + "m ";
-                    using (SoundPlayer player = new SoundPlayer("C:\\Users\\Peen\\Documents\\Visual Studio 2010\\Projects\\Music Project\\minor.wav"))
+                    using (SoundPlayer player = new SoundPlayer(appPath + "\\Sound\\" + "minor.wav"))
                     {
                         player.PlaySync();
                     }
@@ -73,24 +71,19 @@ namespace WindowsFormsApplication1
             lKeyDisplay.Text = "";
         }
 
-        private void weeeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lKeyDisplay.Text = "All your zombies are belong to us...              ...us                     ...us               ...us                         ...us";
-        }
-
         private void bLeft_Click_1(object sender, EventArgs e)
         {
-            updateWithNewKey(1);
+            updateWithNewKey(ButtonType.Major);
         }
 
         private void bMiddle_Click_1(object sender, EventArgs e)
         {
-            updateWithNewKey(2);
+            updateWithNewKey(ButtonType.Both);
         }
 
         private void bRight_Click_1(object sender, EventArgs e)
         {
-            updateWithNewKey(3);
+            updateWithNewKey(ButtonType.Minor);
         }
 
         private void bReset_Click(object sender, EventArgs e)
@@ -98,7 +91,7 @@ namespace WindowsFormsApplication1
             lKeyDisplay.Text = "";
         }
 
-        int selectedRadial = 1;
+        ButtonType selectedRadial = ButtonType.Major;
         private void button1_Click(object sender, EventArgs e)
         {
             if (timer1.Enabled == true)
@@ -120,27 +113,18 @@ namespace WindowsFormsApplication1
 
         private void rMajor_CheckedChanged(object sender, EventArgs e)
         {
-            selectedRadial = 1;
+            selectedRadial = ButtonType.Major;
         }
 
         private void rBoth_CheckedChanged(object sender, EventArgs e)
         {
-            selectedRadial = 2;
+            selectedRadial = ButtonType.Both;
         }
 
         private void rMinor_CheckedChanged(object sender, EventArgs e)
         {
-            selectedRadial = 3;
+            selectedRadial = ButtonType.Minor;
         }
 
-        private void editIntervalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public static void TimeCallBack(object o)
-        {
-
-        }
     }
 }

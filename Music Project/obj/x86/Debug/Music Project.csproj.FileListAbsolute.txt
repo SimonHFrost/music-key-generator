@@ -1,0 +1,18 @@
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\bin\Debug\Musical Key Generator.exe.config
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\bin\Debug\Musical Key Generator.exe
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\bin\Debug\Musical Key Generator.pdb
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\Musical Key Generator.exe
+C:\Users\Peen\Documents\Visual Studio 2010\Projects\Music Project\Music Project\obj\x86\Debug\Musical Key Generator.pdb
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\bin\Debug\Musical Key Generator.exe.config
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\obj\x86\Debug\Musical Key Generator.exe
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\obj\x86\Debug\Musical Key Generator.pdb
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\bin\Debug\Musical Key Generator.exe
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\bin\Debug\Musical Key Generator.pdb
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Simon\Documents\Visual Studio 2010\Projects\Music_Key_Generator\Music Project\obj\x86\Debug\Music Project.csproj.GenerateResource.Cache
