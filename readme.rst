@@ -10,8 +10,7 @@ Music Key Generator is used to help 'rote' learn musical keys by getting yoursel
 ######################
 Future implementations & Known Issues
 ######################
-. GUI Threading - currently hangs when playing audio clip
-. No sharp keys
-. Audio clip for 'minor' is a terrible self recording and I'll replace it eventually
-. Adjustable time period for interval
-. Code structure is terrible :(
+- GUI Threading - currently hangs when playing audio clip
+- No sharp keys
+- Audio clip for 'minor' is a terrible self recording and I'll replace it eventually
+- Adjustable time period for interval
